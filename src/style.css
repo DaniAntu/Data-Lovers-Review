@@ -1,3 +1,13 @@
+.go-up{
+  display: inline-block;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  bottom:20px;
+  right: 20px;
+  border-radius: 100%;
+}
 .card .card-content{
   padding-top: 0px;
 }
@@ -93,6 +103,7 @@ body{
   background-repeat: no-repeat;
   color: white;
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .id-poke-search{
