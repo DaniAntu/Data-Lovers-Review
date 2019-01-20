@@ -1,3 +1,27 @@
+.card .card-content{
+  padding-top: 0px;
+}
+.parr{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.card .card-image img{
+  width: 50%;
+  display: -webkit-inline-box;
+  margin-top: 5px;
+  border: solid;
+  border-radius: 50%;
+}
+
+.card.small {
+  max-width: 250px;
+}
+
+.card{
+  background: linear-gradient(111.6deg, #FFFFFF 2.76%, #B5FEA7 90.52%);
+  color:#1D8696;
+}
+
 .text-title{
   padding-top: 125px;
 }
