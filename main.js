@@ -16,8 +16,8 @@ function createCardPoke(dataSent){
       dataSent.forEach(element => {
             console.log('foor each');
             cards.innerHTML += `
-            <div class= "row">
-            <div class="col s3 m6">
+            
+            <div class="target col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
                   <div class="card small">
                         <div class="card-image waves-effect waves-block waves-light center-align">
                               <img class="activator" src=" ${element.img}">
@@ -38,7 +38,7 @@ function createCardPoke(dataSent){
                         </div>
                   </div>
             </div>
-            </div>`
+            `
       });        
 }
 
@@ -103,8 +103,9 @@ function createCardPoke(dataSent){
     //Buscar por nombre e ID    
     document.getElementById('search').addEventListener('click',(event) => {
         event.preventDefault();        
-        let valueToFind = document.getElementsByClassName('id-poke-search').value;
-        let find = searchFor(data,valueToFind);
+        let valueToFind = document.getElementById('id-search').value;
+        console.log(valueToFind);
+        let find = window.dataPokemon.searchFor(data,valueToFind);
         if (find[0] === undefined){
             cards.innerHTML = '';
             cards.innerHTML = `
@@ -117,27 +118,31 @@ function createCardPoke(dataSent){
                 </div>` 
             }else {
         cards.innerHTML = '';
-        cards.innerHTML = `
+        cards.innerHTML = 
+            `
             <div class="target col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
-                <div class="card">
-                <div class="front"></div>
-                <div class="box">
-                    <div class="img">
-                        <img src=" ${find[0].img} ">
-                    </div>
-                    <h2> ${find[0].name}<br><span> ${find[0].num}</span> </h2>
-                    <p>Type: ${find[0].type}</p>
-                </div>
-                <div class="back">
-                 <p> #: ${find[0].num}</p>
-                 <p>Altura: ${find[0].height}</p>
-                 <p>Peso: ${find[0].weight}</p>
-                 <p>Tipo: ${find[0].type}</p>
-                 <p>Posibilidad de encontrarlo: ${element.spawn_chance}</p>
-                 <p>Debilidad con Pókemon tipo: ${find[0].weaknesses}</p>
-                </div>
-                </div>
-            </div>` 
+                  <div class="card small">
+                        <div class="card-image waves-effect waves-block waves-light center-align">
+                              <img class="activator" src=" ${find[0].img}">
+                        </div>
+                        <div class="card-content">
+                              <span class="card-title activator"><strong>${find[0].name}</strong><i class="material-icons right">more_vert</i></span>
+                              <p>#${find[0].num}</p>
+                        </div>
+                        <div class="card-action">
+                              <p class="parr">• Tipo: ${find[0].type}</p>
+                              <p class="parr">• Debilidad: ${find[0].weaknesses}</p>
+                        </div>
+                        <div class="card-reveal">
+                              <span class="card-title"><strong>${find[0].name}</strong><i class="material-icons right">close</i></span>
+                              <p>Altura: ${find[0].height}</p>
+                              <p>Peso: ${find[0].weight}</p>
+                              <p>Posibilidad de encontrarlo: ${find[0].spawn_chance}</p>
+                        </div>
+                  </div>
+            </div>
+            `
+            document.getElementById('id-search').value ="";
         }
     });
 
@@ -165,7 +170,7 @@ function createCardPoke(dataSent){
     const orderList = document.getElementById('order');
     orderList.addEventListener('change', () => {
         let status = orderList.options[orderList.selectedIndex].value;
-        order(POKEMON.pokemon,status);
+        window.dataPokemon.order(POKEMON.pokemon,status);
         createCardPoke(data);
     });
 
