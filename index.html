@@ -17,52 +17,42 @@
         <ul class="collapsible popout">
           <li class="">
             <div class="collapsible-header" tabindex="0">
-              <i class="material-icons">filter_drama</i>First</div>
+              <i class="material-icons">filter</i>Fitrar por tipo...</div>
             <div class="collapsible-body" style="">
-                <div id = "filter" class = "container container-span" >
-                    <span class="span-filter" id="Bug"> Insecto </span>
-                    <span class="span-filter" id="Dragon"> Dragon </span>
-                    <span class="span-filter" id="Electric"> Electrico </span>
-                    <span class="span-filter" id="Fighting"> Peleador </span>
-                    <span class="span-filter" id="Fire"> Fuego </span>
-                    <span class="span-filter" id="Flying"> Volador </span>
-                    <span class="span-filter" id="Ghost"> Fantasma </span>
-                    <span class="span-filter" id="Grass"> Hierba </span>
-                    <span class="span-filter" id="Ground"> Tierra </span>
-                    <span class="span-filter" id="Ice"> Hielo </span>
-                    <span class="span-filter" id="Normal">Normal </span>
-                    <span class="span-filter" id="Poison"> Veneno </span>
-                    <span class="span-filter" id="Psychic"> Psíquico </span>
-                    <span class="span-filter" id="Rock"> Roca </span>
-                    <span class="span-filter" id = "Water"> Agua </span>
-                    <span class="span-filter" id = "All"> Todos </span>
-                </div>
+              <div id = "filter" class = "filter section">
+                <span class="span-filter" id="Bug"><img src="img/bug.png" class ="circ-size"></img>Insecto</span>
+                <span class="span-filter" id="Dragon"><img src="img/dragon.png" class ="circ-size"></img>Dragon</span>
+                <span class="span-filter" id="Electric"><img src="img/electric.png" class ="circle circ-size"></img>Electrico</span>
+                <span class="span-filter" id="Fighting"><img src="img/figth.png" class ="circle circ-size"></img>Peleador</span>
+                <span class="span-filter" id="Fire"><img src="img/fire.png" class ="circle circ-size"></img>Fuego</span>
+                <span class="span-filter" id="Flying"><img src="img/fly.png" class ="circle circ-size"></img>Volador</span>
+                <span class="span-filter" id="Ghost"><img src="img/ghost.png" class ="circle circ-size"></img>Fantasma</span>
+                <span class="span-filter" id="Grass"><img src="img/grass.png" class ="circle circ-size"></img>Hierba</span>
+                <span class="span-filter" id="Ground"><img src="img/ground.png" class ="circle circ-size"></img>Tierra</span>
+                <span class="span-filter" id="Ice"><img src="img/ice.png" class ="circle circ-size"></img>Hielo</span>
+                <span class="span-filter" id="Normal"><img src="img/normal.png" class ="circle circ-size"></img>Normal</span>
+                <span class="span-filter" id="Poison"><img src="img/poison.png" class ="circle circ-size"></img>Veneno</span>
+                <span class="span-filter" id="Psychic"><img src="img/psychic.png" class ="circle circ-size"></img>Psíquico</span>
+                <span class="span-filter" id="Rock"><img src="img/rock.png" class ="circle circ-size"></img>Roca</span>
+                <span class="span-filter" id = "Water"><img src="img/water.png" class ="circle circ-size"></img>Agua</span>
+                <span class="span-filter" id = "All"> Todos </span>
+              </div>
             </div>
           </li>
         </ul>
-        
-
-
-
-     
-        
-
-     </div>
-
-      <div class="order">             
-                  <div class="order1">
-                      <div class="container container-order">
-                          <select id="order" class = "order">
-                              <option value="0">Ordena pokemones por...</option> 
-                              <option value="upward">A - Z</option> 
-                              <option value="falling">Z - A</option>
-                              <option value="less">Menor núm ID (Primero)</option>
-                              <option value="major">Mayor núm ID (Primero) </option>
-                          </select>
-                      </div>
-                  </div>
       </div>
 
+      <div class="order container">             
+
+          
+        <select id="order" class = "orderer">
+          <option value="" disabled>Ordena pokemones por...</option> 
+          <option value="upward">A - Z</option> 
+          <option value="falling">Z - A</option>
+          <option value="less" selected>Menor núm ID (Primero)</option>
+          <option value="major">Mayor núm ID (Primero) </option>
+        </select>
+      </div>
       <div class="found">
           <label>Buscar</label>
           <input type = "text" class="id-poke-search browser-default" placeholder="Ej: 005, Charmander, etc."> 
