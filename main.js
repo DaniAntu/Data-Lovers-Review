@@ -1,11 +1,11 @@
 M.AutoInit();
-$(document).ready(function(){
-      $('.go-up').click(function(){
-            $('body, html').animate({
-                  scrollTop: '0px'
-            });
-      });
-});
+// $(document).ready(function(){
+//       $('.go-up').click(function(){
+//             $('body, html').animate({
+//                   scrollTop: '0px'
+//             });
+//       });
+// });
 const data = (POKEMON.pokemon);
 const cards = document.getElementById('poke-cards');    
 
