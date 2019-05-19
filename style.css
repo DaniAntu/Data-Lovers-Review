@@ -1,21 +1,26 @@
-.go-up{
+.cards-container {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.go-up {
   display: inline-block;
   padding: 20px;
   color: white;
   cursor: pointer;
   position: fixed;
-  bottom:20px;
+  bottom: 20px;
   right: 20px;
   border-radius: 100%;
 }
-.card .card-content{
+.card .card-content {
   padding-top: 0px;
 }
-.parr{
+.parr {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.card .card-image img{
+.card .card-image img {
   width: 50%;
   display: -webkit-inline-box;
   margin-top: 5px;
@@ -23,30 +28,31 @@
   border-radius: 50%;
 }
 
-.card.small {
+/* .card.small {
   max-width: 250px;
-  margin: .5rem .5rem 1rem 0;
+  width: 25%;
+  margin: 20px 0;
+} */
+
+.card {
+  background: linear-gradient(111.6deg, #ffffff 2.76%, #b5fea7 90.52%);
+  color: #1d8696;
 }
 
-.card{
-  background: linear-gradient(111.6deg, #FFFFFF 2.76%, #B5FEA7 90.52%);
-  color:#1D8696;
-}
-
-.text-title{
+.text-title {
   padding-top: 125px;
 }
 
-.button-search{
+.button-search {
   margin-left: 250px;
-  margin-top : 3px;
+  margin-top: 3px;
   background: transparent;
   border: none;
   border: 2px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background: #1D8696;
+  background: #1d8696;
   cursor: pointer;
   color: white;
 }
@@ -56,48 +62,48 @@
   margin-left: 20px;
 }
 .select-wrapper input.select-dropdown {
-  color:white;
+  color: white;
   background-image: url('../src/img/poke.png');
   background-repeat: no-repeat;
   background-size: 20px;
   background-position-x: 15px;
   background-position-y: 12px;
-  padding-left: 40px; 
+  padding-left: 40px;
 }
 
-.collapsible-header{
+.collapsible-header {
   /* background: linear-gradient(90deg, #A8DD9C 0%, #24CCAA 100%); */
   background: transparent;
   border: none;
 }
 
-.menu{
-  background: linear-gradient(90deg, #A8DD9C 0%, #24CCAA 100%);
+.menu {
+  background: linear-gradient(90deg, #a8dd9c 0%, #24ccaa 100%);
   border: none;
   background-size: cover;
 }
 
-.circ-size{
+.circ-size {
   width: 50px;
-  height: 50px;   
+  height: 50px;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
-  transition:filter 0.4s;
-  -webkit-transition:-webkit-filter 1s;
-  text-align:center;  
+  transition: filter 0.4s;
+  -webkit-transition: -webkit-filter 1s;
+  text-align: center;
 }
 
-.circ-size:hover{
+.circ-size:hover {
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
 }
 
-.span-filter{
+.span-filter {
   text-align: center;
-  display: inline-grid;  
+  display: inline-grid;
 }
 
-body{
+body {
   background: linear-gradient(119.36deg, #52b888 0%, #266378 100%);
   background-size: cover; /*para que cubra todo el body*/
   background-repeat: no-repeat;
@@ -106,8 +112,8 @@ body{
   background-attachment: fixed;
 }
 
-.id-poke-search{
-  background-color: rgba(0,0,0,0.1);
+.id-poke-search {
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100px;
   border: none;
   background-image: url('../src/img/poke.png');
@@ -123,16 +129,16 @@ body{
 }
 
 .id-poke-search::placeholder {
-  color:white;
+  color: white;
 }
 
-.filtered, .order, .found{
-  width:33.33%;
+.filtered,
+.order,
+.found {
+  width: 33.33%;
   height: 150px;
-  float:left;
+  float: left;
 }
-
-
 
 /* .button-search:hover{
   border-radius: 50px;
@@ -141,34 +147,37 @@ body{
   border: 2px solid rgb(211, 186, 186);
 } */
 
-
-@media (max-width:2000px){
-  .filtered, .order, .found{
-    width:100%;
+@media (max-width: 2000px) {
+  .filtered,
+  .order,
+  .found {
+    width: 100%;
     height: 150px;
-    float:left;
+    float: left;
   }
 }
 
-@media (max-width:1000px){
-  .filtered, .order, .found{
-    width:100%;
+@media (max-width: 1000px) {
+  .filtered,
+  .order,
+  .found {
+    width: 100%;
     height: 150px;
-    float:left;
+    float: left;
   }
 }
 
-@media (max-width:500px){
-  .filtered, .order, .found{
-    width:100%;
+@media (max-width: 500px) {
+  .filtered,
+  .order,
+  .found {
+    width: 100%;
     height: 150px;
-    float:left;
+    float: left;
   }
-  
 }
 
 @media #{$small-and-down} {
-  
 }
 @media #{$medium-and-up} {
   // styles for medium screens and larger
