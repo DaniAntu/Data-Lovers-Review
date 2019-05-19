@@ -49,7 +49,6 @@ function createCardPoke(dataSent) {
   let number = 0;
   let containerCards;
   dataSent.forEach((element, index) => {
-    console.log('index >' + index + ' ' + number);
     if (number === 0 || index === number) {
       cards.innerHTML += `
       <div id ="card${index}" class="row">${printCard(element)} </div> `;
@@ -57,8 +56,7 @@ function createCardPoke(dataSent) {
     } else {
       containerCards.innerHTML += `${printCard(element)}`;
     }
-    if (number === 0) ? number += 3 :  number += 4;
-    }
+    number === 0 ? (number += 3) : (number += 4);
   });
 }
 //Filtrado
@@ -72,7 +70,6 @@ spanValueFilter.forEach(function(element) {
       createCardPoke(data);
     } else {
       let valueSpain = element.innerHTML;
-      console.log(valueSpain);
       cards.innerHTML = '';
       let calculation = window.dataPokemon.probability(data, valueSpan).toFixed(3);
       document.getElementById('calc').innerHTML =
@@ -87,7 +84,6 @@ spanValueFilter.forEach(function(element) {
 document.getElementById('search').addEventListener('click', event => {
   event.preventDefault();
   let valueToFind = document.getElementById('id-search').value;
-  console.log(valueToFind);
   let find = window.dataPokemon.searchFor(data, valueToFind);
   if (find[0] === undefined) {
     cards.innerHTML = '';
